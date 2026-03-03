@@ -26,6 +26,12 @@ docker-compose up -d
 http://localhost:8081
 ```
 
+### Swagger UI (interactive API docs)
+
+```
+http://localhost:8081/swagger-ui/index.html
+```
+
 ### Example requests (Postman / curl)
 
 | Method | URL |
