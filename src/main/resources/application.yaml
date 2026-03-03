@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: mypolicy-implementation
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb+srv://praticks2003_db_user:cPZqSJF3LPPsHSEv@cluster0.enwyvnr.mongodb.net/?appName=Cluster0}
+      database: Backend_databases
+
+mypolicy:
+  mapping-config: classpath:mapping_config.json
+  encryption:
+    secret: ${PII_ENCRYPTION_SECRET:MyPolicy2DefaultSecretKey32Chars!!}
+  advisory:
+    life-sum-assured-multiplier: 10
+    health-coverage-min: 300000
+    auto-idv-min: 100000
+    days-nearing-expiry: 90
+
+logging:
+  level:
+    com.mypolicy: INFO
+    com.mypolicy.audit: INFO
