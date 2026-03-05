@@ -1,7 +1,6 @@
 # Standalone Data Pipeline Service for QA/API testing
-# Run: docker-compose up -d
-# Test: http://localhost:8081/api/pipeline/run
-version: "3.8"
+# Run: docker compose up -d
+# Test: http://localhost:8081/api/pipeline/run  |  http://localhost:8081/insurer-portal
 
 services:
   mongodb:
@@ -23,7 +22,7 @@ services:
     ports:
       - "8081:8081"
     environment:
-      MONGODB_URI: mongodb://mongodb:27017
+      MONGODB_URI: mongodb://mongodb:27017/Backend_databases
     depends_on:
       mongodb:
         condition: service_healthy
