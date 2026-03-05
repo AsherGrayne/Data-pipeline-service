@@ -26,6 +26,10 @@ Runs on **port 8081**.
 |--------|----------|-------------|
 | POST | `/api/pipeline/run` | Standardize + stitch; returns matched/unmatched counts |
 | POST | `/api/pipeline/upload` | Upload CSV file; ingests, standardizes, stitches (see POSTMAN_UPLOAD_GUIDE.md) |
+
+## Insurer Portal (Web UI)
+
+Open **http://localhost:8081/insurer-portal/** in a browser to upload CSV files (customer_details, life_insurance, health_insurance, auto_insurance) via a simple web form.
 | GET | `/api/portfolio/{customerId}` | Unified portfolio for customer |
 | GET | `/api/advisory/{customerId}` | Coverage advisory with gap analysis |
 
